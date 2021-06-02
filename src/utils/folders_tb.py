@@ -45,7 +45,7 @@ eda_project_path = dir(dir(dir(__file__)))
 sys.path.append(eda_project_path)
 
 def leer_csv_post_cleaning(nombre_archivo):
-    ''' Lee un archivo .csv ubicado en la dirección /data/DATA_POST_CLEANING.
+    ''' Lee un archivo .csv ubicado en la dirección /data/DATA_POST_CLEANING y lo carga como un dataframe.
         Arg: nombre_archivo: Nombre del archivo que se desea abrir en string (se debe agregar ".csv"). '''
     global df
     df = pd.read_csv(eda_project_path + sep + 'data' + sep + 'DATA_POST_CLEANING' + sep + nombre_archivo)
@@ -67,3 +67,11 @@ def csv_to_json(path_fichero):
     dataframe_accidentes = dataframe_accidentes.head(5000)
     json_accidentes = dataframe_accidentes.to_json(indent = 4)
     return json_accidentes
+
+
+def excel_resources_df(nombre_archivo):
+    ''' Lee un archivo .xlsx ubicado en la dirección /resources y lo carga como un dataframe.
+        Arg: nombre_archivo: Nombre del archivo que se desea abrir en string (se debe agregar ".xlsx"). '''
+    global df
+    df = pd.read_excel(eda_project_path + sep + 'resources' + sep + nombre_archivo)
+    return df

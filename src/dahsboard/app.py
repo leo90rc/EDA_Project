@@ -29,7 +29,7 @@ if menu == 'Bienvenida':
     st.write('')
     st.write('Para realizar foco sobre un objeto de estudio, se plantea la siguiente hipótesis:')
     st.write('')
-    st.markdown('**Durante los meses de temporada alta (Julio, Agosto y Septiembre), se registran mayor cantidad de accidentes de tráfico en las zonas más turísticamente concurridas de la ciudad de Barcelona.**')
+    st.markdown('**Durante los meses de temporada alta (Julio, Agosto y Septiembre), se registran mayor cantidad de accidentes de tráfico en las zonas más turísticas de la ciudad de Barcelona.**')
 
 
 
